@@ -1,0 +1,99 @@
+
+
+<div class="container">
+    <div class="row mt-3 mb-2 pt-5">
+    <div class="col-sm-8">
+      <h3 style="color: #004f7a !important; float: left;">
+        <b>Customer - {{this.record?.customerName}}</b></h3>
+    </div>
+    
+     <div class="col-sm-4" style="text-align: end;">
+      <h3 style="color: #004f7a !important;">
+        <b>Agent Name - {{this.record?.agentName}}</b>
+      </h3>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-sm-6">
+        <div class="p-3 bg-secondary text-black" style="background-color: #E7E9EB !important;">
+        <h4 style="color: #004f7a !important;">Recording - {{this.record?.recordingName}}</h4>        
+      <audio #audioPlayer controls style="width: 100%;" [src]="'http://127.0.0.1:5000/audio/'+ this.record?.recordingPath"></audio>
+        
+      </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="p-3 bg-secondary text-black" style="background-color: #E7E9EB !important;">
+        <h4 style="color: #004f7a !important;">Overall Sentiment</h4>
+        <p class="mt-3">
+            <span *ngIf="this.record?.sentiment=='Positive'" class="badge bg-success me-2" style="background: #19fb8b !important; font-size: 16px;"><i class="fas fa-face-smile"></i> Positive</span>
+            <span *ngIf="this.record?.sentiment=='Negative'" class="badge bg-danger me-2" style="background: maroon !important; font-size: 16px;"><i class="fas fa-face-frown"></i> Negative</span>
+            <span *ngIf="this.record?.sentiment=='Neutral'" class="badge bg-info me-2" style="background: orange !important; font-size: 16px;"><i class="fas fa-face-meh"></i> Neutral</span>
+        </p>      
+      </div>
+    </div>
+  </div>
+  <div class="row mb-2" >   
+      
+    <div class="col-sm-12">
+      <div class="mt-3 p-3 bg-secondary text-black" style="background-color: #E7E9EB !important;">
+        <h4 style="color: #004f7a !important;">Summary</h4>
+        <p>{{this.record?.summary}}</p>
+      </div>
+    </div>
+    <div class="col-sm-6 mb-3">
+      <div class="mt-3 p-3 bg-secondary text-black" style="background-color: #E7E9EB !important;">
+        <h4 style="color: #004f7a !important;">Key Entities</h4>
+        <p class="mt-3">{{this.record?.keyEntities}}</p>
+      </div>
+    </div>
+    <div class="col-sm-6 mb-3">
+      <div class="mt-3 p-3 bg-secondary text-black" style="background-color: #E7E9EB !important;">
+        <h4 style="color: #004f7a !important;">Topic</h4>       
+         <p class="mt-3">
+          {{this.record?.topics}}
+        </p>
+      </div>       
+    </div>
+    <div class="col-sm-6 mb-3">
+      <div class="mt-3 p-3 bg-secondary text-black" style="background-color: #E7E9EB !important;">
+        <h4 style="color: #004f7a !important;">Intent</h4>       
+         <p class="mt-3">
+          {{this.record?.intent}}
+        </p>
+      </div>       
+    </div>   
+    <div class="col-sm-6 mb-3">
+      <div class="mt-3 p-3 bg-secondary text-black" style="background-color: #E7E9EB !important;">
+        <h4 style="color: #004f7a !important;">Compliance: {{this.record?.compliance}}</h4>
+        <!-- <p>{{this.record?.compliance}}</p> -->
+         <p class="mt-3">
+          {{this.record?.complianceSummary}}
+        </p>
+      </div>       
+    </div>
+     <div class="col-sm-6 mb-3">
+      <div class="mt-3 p-3 bg-secondary text-black" style="background-color: #E7E9EB !important;">
+        <h4 style="color: #004f7a !important;">Sentiment Progression</h4>
+        <p>{{this.record?.sentimentProgression}}</p>
+      </div>
+    </div>
+    
+    <div class="col-sm-6 mb-3">
+      <div class="mt-3 p-3 bg-secondary text-black" style="background-color: #E7E9EB !important;">
+        <h4 style="color: #004f7a !important;">Action Item</h4>
+        <p class="mt-3">{{this.record?.actionItem}}</p>
+      </div>
+    </div>
+    
+   </div>
+    <div class="row mt-2">   
+    <div class="col-sm-12">
+      
+      <div class="mt-3 p-3 bg-secondary text-black" style="background-color: #E7E9EB !important;">
+        <h4 style="color: #004f7a !important;">Transcript</h4>       
+        <p>{{this.record?.transcript}}</p>
+      </div>
+     
+    </div>
+  </div>
+</div>

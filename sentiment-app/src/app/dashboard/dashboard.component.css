@@ -1,0 +1,35 @@
+.calls {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 14px;
+}
+.calls th, .calls td {
+  border: 1px solid #e5e7eb;
+  padding: 10px 12px;
+  text-align: left;
+}
+.calls thead th {
+  background: #f9fafb;
+  font-weight: 600;
+}
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 9999px; /* pill */
+  font-weight: 600;
+  line-height: 1.6;
+  border: 1px solid transparent;
+}
+
+/* Color schemes (no icons used) */
+.badge-inbound {
+  background: #ecfdf5;
+  color: #065f46;
+  border-color: #a7f3d0;
+}
+.badge-outbound {
+  background: #eff6ff;
+  color: #454548;
+  border-color: #bfdbfe;
+}
