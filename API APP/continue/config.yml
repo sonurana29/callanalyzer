@@ -1,0 +1,6 @@
+models:
+  - name: AI CoE Model Garden Agent 
+    provider: openai
+    model: gpt-4o
+    apiBase: <apibase>
+    apiKey: <apikey>
